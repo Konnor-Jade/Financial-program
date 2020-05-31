@@ -28,11 +28,6 @@ def save_to_index_basic(data,table_name,con,if_exists='append'):
     '''
     #将数据添加到数据库中时，index
     data.to_sql(name=table_name, con=engine, if_exists=if_exists,index=False)
-    data.to_sql(name='table', 
-              con=con, 
-              if_exists='append', 
-              index=False
-             )
     return ''
 
 

@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="content"></view>
+<image class='background' src='../../img/3.jpg'></image>
+
+<view class="container">
+  
+  <view bindtap='MT'>获取每日数据
+    <view 
+       wx:for="{{demo}}">
+      {{index}}:<view>指数名称：{{item.name}} </view>
+                <view>代码：{{item.code}} </view>
+                <view> 市盈率：{{item.pe}} </view>
+                <view>历史百分位：{{item.sort}} </view>
+                
+    </view>
+  </view>
+</view>

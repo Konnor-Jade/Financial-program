@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基金数据查询</title>
+</head>
+<body>
+   
+      <?php
+      header("Content-Type:text/html;   charset=UTF-8");
+      ?>
+</body>
+</html>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>php表单提交</title>
+		<style>
+			body{
+				margin: 0;padding: 0;
+				background-image: url(img/back1.jpg);
+				background-repeat: repeat;				
+				}
+			.main{
+				margin-right:auto ;
+				margin-left: auto;
+				background-repeat: no-repeat;
+				width:  552px;
+	            height: 552px;
+			}
+			.form{
+				width: 510px;
+				height: 410px;
+				padding-top: 105px;
+				
+				position: relative;
+			}
+			label{
+				display: inline-block;
+				width: 160px;
+				padding-left:20px ;
+				text-align: right;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="main">
+			<div class="form">
+                <form action="data.php" method="get" name="form1" enctype="multipart/form-data" target="_self">
+                    <tr bgcolor="#FFCC33">
+                     指数名称：
+                     <select name="name" id="code" >
+                       <option index_name="上证50" selected>上证50</option>
+					   <option index_name="上证指数" selected>上证指数</option>
+					   <option index_name="商业指数" selected>商业指数</option>
+					   <option index_name="地产指数" selected>地产指数</option>
+					   <option index_name="中证500" selected>中证500</option>
+					   <option index_name="沪深300" selected>沪深300</option>
+					   <option index_name="中小板指" selected>中小板指</option>
+					   <option index_name="创业板指" selected>创业板指</option>
+					   <option index_name="深证创新" selected>深证创新</option>
+					   <option index_name="深证成指" selected>深证成指</option>          
+                     </select>
+                     交易日期: <input type="text" name="day">
+                     <input  type="submit" value="提交">
+                    </tr>
+                </form>
+			</div>
+		</div>
+	</body>
+</html>

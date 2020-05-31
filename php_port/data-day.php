@@ -6,8 +6,8 @@
     #mysql_select_db("finance", $link); //选择数据库
     #mysql_query("SET NAMES utf8");//解决中文乱码问题
     $servername = "localhost";
-	$username = "finance";
-	$password = "finance";
+	$username = "root";
+	$password = "root";
 	$dbname = "finance";
 	$conn = new mysqli($servername, $username, $password, $dbname);
 	// Check connection
@@ -27,8 +27,8 @@
     {
         $data["name"] = $row["name"];
         $data["code"] = $row["ts_code"];
-        $data["trade_date"] = $row["trade_date"]
-        $data["pe"]   = $row["pe"];
+        $data["trade_date"] = $row["trade_date"];
+        $data["pe"] = $row["pe"];
         $data["sort"] = $row["sort"];
         $datas[$i++]=$data;
     }

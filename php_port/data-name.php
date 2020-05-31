@@ -6,8 +6,8 @@
     #mysql_select_db("finance", $link); //选择数据库
     #mysql_query("SET NAMES utf8");//解决中文乱码问题
     $servername = "localhost";
-	$username = "finance";
-	$password = "finance";
+    $username = "root";
+	$password = "root";
 	$dbname = "finance";
 	$conn = new mysqli($servername, $username, $password, $dbname);
 	// Check connection

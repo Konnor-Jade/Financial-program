@@ -1,0 +1,19 @@
+<view class="content"></view>
+<image class='background' src='../../img/3.jpg'></image>
+
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view>
+  <button class="myClass1" style="width:60vw" bindtap='gotoPage1'hover-class="hover1" >每日数据</button>
+  </view>
+  <view>
+    <button class="myClass2" style="width:60vw" bindtap='gotoPage2'hover-class="hover2">历史数据</button>
+  </view>
+</view>
+

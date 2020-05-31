@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<!--index.wxml-->
+<view class='select_box'>
+    <view class='select' catchtap='selectTap'>
+        <text class='select_text'>{{selectData[index]}}</text>
+        <image class='select_img {{selectShow&&"select_img_rotate"}}' src='../../img/1.jpg'  background-size="contain"></image> 
+    </view>
+    <view class='option_box' style='height:{{selectShow?(selectData.length>5?325:selectData.length*50):0}}rpx;'>
+        <text class='option' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+    </view>
+</view>
+
+
+
+<form bindsubmit="formSubmit">
+<!--提交按钮  -->
+ <input type="text" name="id" placeholder='输入日期' style='border:1px solid #ccc;height:30px;margin-top: 500rpx;'/>
+   <button formType="submit" class="btn"  hover-class="hover3">搜索</button>    
+</form>
+
+<view wx:for="{{re}}" wx:key="re">
+  <view wx:if="{{item.trade_date ==  trade_date }}">
+    <view style='color:#f00;'>指数名称：{{item.name}}</view>
+    <view style='color:green;'>代码：{{item.code}}</view>
+                    <view> 交易日期：{{item.trade_date}} </view>
+                  <view> 市盈率：{{item.pe}} </view>
+                  <view>历史百分位：{{item.sort}} </view>
+  </view>
+</view>
