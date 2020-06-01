@@ -1,9 +1,10 @@
 <!--index.wxml-->
+<view>{{today}}</view>
+
 <view class="content"></view>
 <image class='background' src='../../img/3.jpg'></image>
 
 <view class="container">
-  
   <view bindtap='MT'>获取每日数据
     <view 
        wx:for="{{demo}}">
